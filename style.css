@@ -1,0 +1,201 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    background-image: url('assets/pink2.jpg'); /* Replace 'your-background-image.jpg' with the path to your image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+}
+  header {
+    text-align: center;
+    padding: 20px 0;
+    background: linear-gradient(to right, #ff6347, #4169e1);
+    color: white;
+    position: relative;
+  }
+  header h1 {
+    font-size: 3em;
+    margin: 0;
+  }
+  header .github-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+  }
+  header .github-button:hover {
+    background-color: #e5533d;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    
+  }
+  .card {
+    /* width: 80%; */
+    width: 300px;
+    height: 300px;    
+    position: relative;
+    margin: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    perspective: 1000px;
+  }
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    
+  }
+  .card-front {
+    background-color: #ffffff;
+  }
+  .card-back {
+    background-color: #070707;
+    color: white;
+    transform: rotateY(180deg);
+    
+  }
+
+
+
+.card-back a.github-link {
+    color: #ffffff;
+    text-decoration: underline;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+    position: absolute; /* Position absolutely within the card */
+    bottom: 60px; /* Distance from the bottom */
+    left: 50%; /* Horizontal center */
+    transform: translateX(-50%); /* Adjust horizontally to center */
+}
+  .card-back a.github-link:hover {
+    /* background-color: #ff6347; */
+    color: #5aa5f0;
+}
+  .left {
+    /* align-self: flex-start; */
+    align-self: center; /* Center aligned */
+    transform: translateX(-80%); /* Shift to the left */
+  }
+  .right {
+    align-self: center;
+    transform: translateX(80%); /* Shift to the right */
+  }
+  .bubble {
+    position: fixed;
+    bottom: -100px;
+    left: calc(50% - 10px);
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle, #ff6347, #ff4500);;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: bubble 10s infinite;
+  }
+  .bubble:nth-child(odd) {
+    /* background-color: #1e90ff;
+     */
+    background: radial-gradient(circle, #1e90ff, #4169e1);
+    animation-duration: 12s;
+  }
+  .static-circle {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+  }
+  .circle-left {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, #ff6347, #ff4500);
+    top: 300px;
+    left: -100px;
+  }
+  .circle-right {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, #1e90ff, #4169e1);
+    top: 600px;
+    right: -150px;
+  }
+  .banner {
+    background: linear-gradient(to right, #ff6347, #4169e1); /* Gradient background */
+    padding: 10px 50px; 
+    border-radius: 40px; /* Rounded corners */
+    margin-bottom: 20px; /* Add space between the banner and the columns */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.banner h2 {
+    margin: 0; /* Remove default margin */
+    color: white; /* Text color */
+    font-size: 1.5em; /* Adjust font size */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Text shadow for contrast */
+}
+  .column {
+    width: calc(50% - 20px);/* Adjusted width to accommodate padding */
+    float: left;
+    padding: 15px;
+    /* white-space: nowrap; */
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding box shadow */
+    border-radius: 10px; /* Adding border radius */
+    margin-bottom: 20px; /* Adding margin between columns */
+    margin-left: 20px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills-container h3 {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.skills-container ul {
+    list-style-type: circle;
+    padding: 5;
+}
+  @keyframes bubble {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 0.3;
+    }
+    100% {
+      transform: translateY(-1000px) scale(0.5);
+      opacity: 0;
+    }
+  }

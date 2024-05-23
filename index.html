@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shefali's Portfolio</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<header>
+  <h1>Shefali's Profile - Circles</h1>
+  <!-- <a href="https://github.com/shefali-shankar" class="github-button" target="_blank">GitHub</a> -->
+  <div class="bubbles">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </div>
+</header>
+
+<div class="static-circle circle-left"></div>
+<div class="static-circle circle-right"></div>
+
+
+<div class="container">
+    <div class="banner">
+        <h2>Technical Skills</h2>
+    </div>
+            <div class="skills-container">
+                <div class="column">
+                    <h3>Languages</h3>
+                    <ul>                        
+                        <li>C++</li>
+                        <li>Python</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Cybersecurity</h3>
+                    <ul>
+                        <li>Network </li>
+                        <li>Encryption</li>
+                        <li>Vulnerability </li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Data </h3>
+                    <ul>
+                        <li>SQL</li>
+                        <li>Hadoop</li>
+                        <li>Spark</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Cloud</h3>
+                    <ul>
+                        <li>Azure</li>
+                        <li>AWS</li>
+                    </ul>
+                </div>
+            </div>
+
+    
+    <div class="banner">
+        <h2>Projects</h2>
+    </div>
+  <div class="card left">
+    <div class="card-inner">
+      <div class="card-front">
+        <h2>Intelligent Traffic Control System</h2>
+      </div>
+      <div class="card-back">
+        <p>Python project built using Image Processing and Neural Networks that moves the road divider based on the density of the traffic on either sides. </p>
+        <a href="https://github.com/shefali-shankar/Intelligent-Traffic-Control-System" class="github-link" target="_blank">Link</a>
+           
+    </div>
+    </div>
+  </div>
+  <div class="card right">
+    <div class="card-inner">
+      <div class="card-front">
+        <h2>Vulnerability <br> Exploitation <br> Analysis</h2>
+      </div>
+      <div class="card-back">
+        <p>Python project built to analyse and predict system vulnerabilities and exploits. </p>
+        
+        <a href="https://github.com/shefali-shankar/Vulnerability-Exploitation-Analysis" class="github-link" target="_blank">Link</a>
+           
+      </div>
+    </div>
+  </div>
+  <div class="card left">
+    <div class="card-inner">
+      <div class="card-front">
+        <h2>Greenhouse Effect Project</h2>
+      </div>
+      <div class="card-back">
+        <p>Computer Graphics project built using C++ with OpenGL, depicting the various scenes of hazardous effects of the greenhouse effects </p>
+        <a href="https://github.com/shefali-shankar/Greenhouse-Effect" class="github-link" target="_blank">Link</a>
+           
+    </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Generate bubbles
+  const bubbleContainer = document.querySelector('.bubbles');
+  for (let i = 0; i < 10; i++) {
+    const bubble = document.createElement('div');
+    bubble.classList.add('bubble');
+    bubble.style.left = `${Math.random() * 100}%`;
+    bubble.style.animationDelay = `${Math.random() * 10}s`;
+    bubbleContainer.appendChild(bubble);
+  }
+</script>
+
+</body>
+</html>
